@@ -2,7 +2,6 @@ import { Box, Container, Flex, HStack, IconButton, Text, Button, Menu, Portal } 
 import * as React from "react"
 import { Link, useLocation } from "react-router"
 import { LuMenu, LuSearch, LuUser, LuShoppingCart, LuHeart } from "react-icons/lu"
-import { ColorModeButton } from "@components/ui/color-mode"
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -90,17 +89,16 @@ const Header = () => {
             <Box w="16px" h="16px" position="relative">
               <Box
                 position="absolute"
-                top="2px"
-                left="2px"
-                w="12px"
-                h="12px"
-                border="1.5px solid #52525B"
+                top="0"
+                left="0"
+                w="16px"
+                h="16px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
               >
                 <IconButton aria-label="Search" variant="ghost" size="xs" p="0" minW="unset">
-                  <LuSearch style={{ width: "12px", height: "12px" }} />
+                  <LuSearch style={{ width: "16px", height: "16px" }} />
                 </IconButton>
               </Box>
             </Box>
@@ -108,17 +106,16 @@ const Header = () => {
             <Box w="16px" h="16px" position="relative">
               <Box
                 position="absolute"
-                top="2px"
-                left="1.33px"
-                w="13.333333015441895px"
-                h="12px"
-                border="1.5px solid #52525B"
+                top="0"
+                left="0"
+                w="16px"
+                h="16px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
               >
                 <IconButton aria-label="Wishlist" variant="ghost" size="xs" p="0" minW="unset">
-                  <LuHeart style={{ width: "12px", height: "12px" }} />
+                  <LuHeart style={{ width: "16px", height: "16px" }} />
                 </IconButton>
               </Box>
             </Box>
@@ -126,29 +123,27 @@ const Header = () => {
             <Box w="16px" h="16px" position="relative">
               <Box
                 position="absolute"
-                top="2px"
-                left="3.33px"
-                w="9.333333015441895px"
-                h="12px"
-                border="1.5px solid #52525B"
+                top="0"
+                left="0"
+                w="16px"
+                h="16px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
               >
                 <IconButton aria-label="Account" variant="ghost" size="xs" p="0" minW="unset">
-                  <LuUser style={{ width: "9.333333015441895px", height: "12px" }} />
+                  <LuUser style={{ width: "16px", height: "16px" }} />
                 </IconButton>
               </Box>
             </Box>
 
-            <Box w="20.8828125px" h="21px" position="relative">
+            <Box w="16px" h="16px" position="relative">
               <Box
                 position="absolute"
-                top="1.37px"
-                left="1.37px"
-                w="13.360000610351562px"
-                h="13.300000190734863px"
-                border="1.5px solid #52525B"
+                top="0"
+                left="0"
+                w="16px"
+                h="16px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
@@ -166,7 +161,6 @@ const Header = () => {
                 </IconButton>
               </Box>
             </Box>
-            <ColorModeButton />
 
             <Box display={{ base: "block", md: "none" }}>
               <Menu.Root>

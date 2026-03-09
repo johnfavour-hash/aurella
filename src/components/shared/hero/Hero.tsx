@@ -22,6 +22,20 @@ const Hero = () => {
         color="white"
       >
         <Box
+          position="absolute"
+          top="0"
+          left="0"
+          w={{ base: "full", md: "1440px" }}
+          h={{ base: "100%", md: "810px" }}
+          mx={{ md: "auto" }}
+          pointerEvents="none"
+          zIndex="0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%)",
+          }}
+        />
+        <Box
           position={{ base: "static", md: "absolute" }}
           top={{ md: "263px" }}
           left={{ md: "100px" }}
