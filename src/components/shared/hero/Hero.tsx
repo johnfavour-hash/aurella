@@ -1,12 +1,151 @@
-import { Box, Container, Heading, Text, Stack, HStack, Icon, Grid, GridItem } from "@chakra-ui/react"
+import { Box, Heading, Text, Stack, HStack, Icon } from "@chakra-ui/react"
 import LinkButton from "@components/shared/buttons/LinkButton"
-import { LuTruck, LuRotateCcw, LuShieldCheck, LuZap, LuArrowRight } from "react-icons/lu"
+import { LuTruck, LuRotateCcw, LuShieldCheck, LuClock, LuArrowRight } from "react-icons/lu"
 
-const TrustItem = ({ icon, label }: { icon: React.ElementType; label: string }) => (
-  <HStack gap="2">
-    <Icon as={icon} />
-    <Text fontSize="sm">{label}</Text>
-  </HStack>
+ 
+
+const FreeShippingItem = () => (
+  <Box w="168.18939208984375px" h="56px" p="10px">
+    <HStack w="148.18939208984375px" h="36px" gap="8px">
+      <Box position="relative" w="20px" h="16px">
+        <Icon as={LuTruck} position="absolute" top="4px" left="2px" boxSize="16px" />
+      </Box>
+      <Box w="116.18939208984375px" h="36px">
+        <Text
+          fontFamily="body"
+          fontWeight="medium"
+          fontSize="sm"
+          lineHeight="20px"
+          letterSpacing="0"
+          color="#18181B"
+          w="116.18939208984375px"
+          h="20px"
+        >
+          Free Shipping
+        </Text>
+        <Text
+          fontFamily="body"
+          fontWeight="normal"
+          fontSize="xs"
+          lineHeight="16px"
+          letterSpacing="0"
+          color="#71717A"
+          w="116.18939208984375px"
+          h="16px"
+        >
+          On orders over $100
+        </Text>
+      </Box>
+    </HStack>
+  </Box>
+)
+
+const EasyReturnsItem = () => (
+  <Box w="168.13931274414062px" h="56px" p="10px">
+    <HStack w="148.13931274414062px" h="36px" gap="8px">
+      <Box w="24px" h="24px" display="flex" alignItems="center" justifyContent="center">
+        <Icon as={LuRotateCcw} boxSize="24px" />
+      </Box>
+      <Box w="116.13931274414062px" h="36px">
+        <Text
+          fontFamily="body"
+          fontWeight="medium"
+          fontSize="sm"
+          lineHeight="20px"
+          letterSpacing="0"
+          color="#18181B"
+          w="116.13931274414062px"
+          h="20px"
+        >
+          Easy Returns
+        </Text>
+        <Text
+          fontFamily="body"
+          fontWeight="normal"
+          fontSize="xs"
+          lineHeight="16px"
+          letterSpacing="0"
+          color="#71717A"
+          w="116.13931274414062px"
+          h="16px"
+        >
+          30-day return policy
+        </Text>
+      </Box>
+    </HStack>
+  </Box>
+)
+
+const SecurePaymentItem = () => (
+  <Box w="197.8929443359375px" h="56px" p="10px">
+    <HStack w="177.8929443359375px" h="36px" gap="8px">
+      <Box w="24px" h="24px" display="flex" alignItems="center" justifyContent="center">
+        <Icon as={LuShieldCheck} boxSize="24px" />
+      </Box>
+      <Box w="145.8929443359375px" h="36px">
+        <Text
+          fontFamily="body"
+          fontWeight="medium"
+          fontSize="sm"
+          lineHeight="20px"
+          letterSpacing="0"
+          color="#18181B"
+          w="145.8929443359375px"
+          h="20px"
+        >
+          Secure Payment
+        </Text>
+        <Text
+          fontFamily="body"
+          fontWeight="normal"
+          fontSize="xs"
+          lineHeight="16px"
+          letterSpacing="0"
+          color="#71717A"
+          w="145.8929443359375px"
+          h="16px"
+        >
+          100% protected checkout
+        </Text>
+      </Box>
+    </HStack>
+  </Box>
+)
+
+const FastDeliveryItem = () => (
+  <Box w="156.50115966796875px" h="56px" p="10px">
+    <HStack w="136.50115966796875px" h="36px" gap="8px">
+      <Box w="24px" h="24px" display="flex" alignItems="center" justifyContent="center">
+        <Icon as={LuClock} boxSize="24px" />
+      </Box>
+      <Box w="104.50115203857422px" h="36px">
+        <Text
+          fontFamily="body"
+          fontWeight="medium"
+          fontSize="sm"
+          lineHeight="20px"
+          letterSpacing="0"
+          color="#18181B"
+          w="104.50115203857422px"
+          h="20px"
+        >
+          Fast Delivery
+        </Text>
+        <Text
+          fontFamily="body"
+          fontWeight="normal"
+          fontSize="xs"
+          lineHeight="16px"
+          letterSpacing="0"
+          color="#71717A"
+          w="104.50115203857422px"
+          h="16px"
+        >
+          2-5 business days
+        </Text>
+      </Box>
+    </HStack>
+  </Box>
 )
 
 const Hero = () => {
@@ -99,22 +238,23 @@ const Hero = () => {
         </Box>
       </Box>
 
-      <Container maxW="7xl" py="6">
-        <Grid templateColumns={{ base: "repeat(2,1fr)", md: "repeat(4,1fr)" }} gap={{ base: "4", md: "6" }}>
-          <GridItem>
-            <TrustItem icon={LuTruck} label="Free Shipping" />
-          </GridItem>
-          <GridItem>
-            <TrustItem icon={LuRotateCcw} label="Easy Returns" />
-          </GridItem>
-          <GridItem>
-            <TrustItem icon={LuShieldCheck} label="Secure Payment" />
-          </GridItem>
-          <GridItem>
-            <TrustItem icon={LuZap} label="Fast Delivery" />
-          </GridItem>
-        </Grid>
-      </Container>
+      <Box
+        w="1440px"
+        h="117px"
+        mx="auto"
+        px="100px"
+        py="24px"
+        bg="#F4F4F5"
+        borderWidth="1px"
+        borderColor="#E4E4E7"
+      >
+        <HStack gap="133px">
+          <FreeShippingItem />
+          <EasyReturnsItem />
+          <SecurePaymentItem />
+          <FastDeliveryItem />
+        </HStack>
+      </Box>
     </Box>
   )
 }

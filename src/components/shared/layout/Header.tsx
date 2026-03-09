@@ -17,75 +17,102 @@ const Header = () => {
   return (
     <Box position="sticky" top="36px" zIndex="10" bg="#FFFFFF" borderBottomWidth="1px" h="56px">
       <Container maxW="1440px" px="100px" py="10px" mx="auto" w="full">
-        <Flex h="36px" align="center" justify="space-between" gap="222px">
-          <Link to="/" style={{ transition: "all 300ms linear" }}>
-            <Text
-              fontFamily="body"
-              fontWeight="normal"
-              fontSize="2xl"
-              lineHeight="32px"
-              letterSpacing="0"
-              color="#111827"
-              w="151.11703491210938px"
-              h="28.8px"
+        <Flex w="1240px" h="36px" align="center" justify="flex-start" gap="222px">
+          <Box w="151.11703491210938px" h="28.799999237060547px" flex="0 0 151.11703491210938px" display="flex" alignItems="center">
+            <Link to="/" style={{ transition: "all 300ms linear" }}>
+              <Text
+                fontFamily="body"
+                fontWeight="normal"
+                fontSize="2xl"
+                lineHeight="32px"
+                letterSpacing="0"
+                color="#111827"
+                w="151.11703491210938px"
+                h="28.8px"
+              >
+                AURELIA
+              </Text>
+            </Link>
+          </Box>
+
+          <Box w="474.0001525878906px" flex="0 0 474.0001525878906px" ml="0">
+            <HStack
+              gap="13px"
+              display={{ base: "none", md: "flex" }}
+              w="474.0001525878906px"
+              h="36px"
+              flex="0 0 474.0001525878906px"
+              justify="flex-start"
             >
-              AURELIA
-            </Text>
-          </Link>
-
-          <HStack
-            gap="13px"
-            display={{ base: "none", md: "flex" }}
-            w="474.0001525878906px"
-            h="36px"
-          >
-            {navLinks.map((item) => {
-              const isSelected = location.pathname === item.to
-              const isShop = item.label === "Shop"
-              const boxW = isShop ? "67px" : "72px"
-              const textW = isShop ? "35px" : "40px"
-              const linkTransition = isShop ? "all 0ms linear" : "all 300ms linear"
-              const borderColor = isSelected ? "#18181B" : (isShop ? "#52525B" : "transparent")
-              const borderWidth = isShop ? "1px" : (isSelected ? "1px" : "0px")
-              const textColor = isShop && !isSelected ? "fg.muted" : "fg"
-              return (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  style={{ transition: linkTransition }}
-                >
-                  <Box
-                    w={boxW}
-                    h="36px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    gap="8px"
-                    borderBottomWidth={borderWidth}
-                    borderBottomColor={borderColor}
+              {navLinks.map((item) => {
+                const isSelected = location.pathname === item.to
+                const isShop = item.label === "Shop"
+                const isWomen = item.label === "Women"
+                const isMen = item.label === "Men"
+                const isAccessories = item.label === "Accessories"
+                const boxW = isAccessories ? "113px" : (isMen ? "61px" : (isWomen ? "82px" : (isShop ? "67px" : "72px")))
+                const textW = isAccessories ? "81px" : (isMen ? "29px" : (isWomen ? "50px" : (isShop ? "35px" : "40px")))
+                const linkTransition = (isShop || isWomen || isMen || isAccessories) ? "all 0ms linear" : "all 300ms linear"
+                const borderColor = isSelected ? "#18181B" : "transparent"
+                const borderWidth = isSelected ? "1px" : "0px"
+                const textColor = isSelected ? "#18181B" : "#52525B"
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.to}
+                    style={{ transition: linkTransition, marginLeft: isMen ? "-5px" : undefined }}
                   >
-                    <Button
-                      variant="ghost"
-                      size="md"
-                      fontFamily="body"
-                      fontWeight="normal"
-                      fontSize="sm"
-                      lineHeight="20px"
-                      letterSpacing="0"
-                      color={textColor}
-                      w={textW}
-                      height="20px"
-                      px="0"
+                    <Box
+                      w={boxW}
+                      h="36px"
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="flex-start"
+                      gap={isMen ? "10px" : "8px"}
+                      pt="2px"
+                      pb="2px"
+                      pr="4px"
+                      pl="4px"
+                      borderBottomWidth={borderWidth}
+                      borderBottomColor={borderColor}
+                      borderTopWidth={undefined}
+                      borderLeftWidth={undefined}
+                      borderRightWidth={undefined}
+                      _hover={{ borderBottomWidth: "1px", borderBottomColor: "#18181B" }}
+                      roundedTop={(isWomen || isMen || isAccessories) ? "l2" : undefined}
                     >
-                      {item.label}
-                    </Button>
-                  </Box>
-                </Link>
-              )
-            })}
-          </HStack>
+                      <Button
+                        variant={(isWomen || isMen || isAccessories) ? "plain" : "ghost"}
+                        size="md"
+                        fontFamily="body"
+                        fontWeight="normal"
+                        fontSize="sm"
+                        lineHeight="20px"
+                        letterSpacing="0"
+                        color={textColor}
+                        w={textW}
+                        height="20px"
+                        px="0"
+                        _hover={{ color: "#18181B" }}
+                      >
+                        {item.label}
+                      </Button>
+                    </Box>
+                  </Link>
+                )
+              })}
+            </HStack>
+          </Box>
 
-          <HStack gap="34px" w="170.8828125px" h="21px" align="center">
+          <Box w="170.8828125px" h="21px" flex="0 0 170.8828125px" ml="auto" mr="34px">
+            <HStack
+              gap="34px"
+              w="170.8828125px"
+              h="21px"
+              alignItems="center"
+              justify="flex-start"
+              flex="0 0 170.8828125px"
+            >
             <Box w="16px" h="16px" position="relative">
               <Box
                 position="absolute"
@@ -180,7 +207,8 @@ const Header = () => {
                 </Menu.Positioner>
               </Menu.Root>
             </Box>
-          </HStack>
+            </HStack>
+          </Box>
 
           {/* Cart Drawer (instant overlay) */}
           <Portal>
