@@ -230,7 +230,7 @@ const Hero = () => {
                   >
                     Shop
                   </Text>
-                  <Icon as={LuArrowRight} boxSize="20px" />
+                  <Icon as={LuArrowRight} boxSize="20px" color="#09090B" />
                 </HStack>
               </LinkButton>
             </HStack>
