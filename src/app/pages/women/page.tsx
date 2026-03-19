@@ -3,7 +3,7 @@ import { ChevronRight, LayoutGrid, List, ChevronDown, ChevronLeft, MoreHorizonta
 import Subscribe from "@components/shared/subscribe/Subscribe"
 import Footer from "@components/shared/layout/Footer"
 
-const ProductsPage = () => {
+const WomenPage = () => {
   return (
     <>
       <Box
@@ -32,7 +32,7 @@ const ProductsPage = () => {
             verticalAlign="middle"
             color="var(--gray-900, #18181B)"
           >
-            All Products
+            Women
           </Text>
           <Text
             w="208px"
@@ -659,4 +659,4 @@ const ProductsPage = () => {
   )
 }
 
-export default ProductsPage
+export default WomenPage

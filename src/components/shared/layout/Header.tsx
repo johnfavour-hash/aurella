@@ -1,7 +1,7 @@
-import { Box, Container, Flex, HStack, IconButton, Text, Button, Menu, Portal } from "@chakra-ui/react"
+import { Box, Container, Flex, HStack, IconButton, Text, Button, Menu, Portal, Stack, Icon } from "@chakra-ui/react"
 import * as React from "react"
 import { Link, useLocation } from "react-router"
-import { LuMenu, LuSearch, LuUser, LuShoppingCart, LuHeart } from "react-icons/lu"
+import { LuMenu, LuSearch, LuUser, LuShoppingCart, LuHeart, LuX, LuTrash2, LuMinus, LuPlus } from "react-icons/lu"
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -217,21 +217,651 @@ const Header = () => {
               position="fixed"
               top="0"
               right="0"
-              h="100vh"
-              w="360px"
-              bg="bg"
+              h="866px"
+              w="593px"
+              bg="#FFFFFF"
               borderLeftWidth="1px"
+              borderColor="#E4E4E7"
               zIndex="30"
+              boxShadow="lg"
             >
-              <Flex h="16" align="center" px="4" borderBottomWidth="1px" justify="space-between">
-                <Text fontWeight="medium">Your Cart</Text>
-                <Button variant="ghost" size="sm" onClick={() => setCartOpen(false)}>
-                  Close
-                </Button>
+              <Flex
+                w="593px"
+                h="68px"
+                justify="space-between"
+                align="center"
+                pt="6"
+                pr="6"
+                pb="4"
+                pl="6"
+                borderBottomWidth="1px"
+                borderColor="#E4E4E7"
+              >
+                <Text
+                  w="545px"
+                  h="28px"
+                  fontFamily="body"
+                  fontWeight="600"
+                  fontSize="lg"
+                  lineHeight="28px"
+                  letterSpacing="0%"
+                  color="var(--text-fg, #000000)"
+                >
+                  Your Cart
+                </Text>
+                <IconButton
+                  aria-label="Close cart"
+                  variant="ghost"
+                  size="xs"
+                  colorPalette="gray"
+                  w="32px"
+                  h="32px"
+                  minW="32px"
+                  gap="4px"
+                  pt="2px"
+                  pr="2.5"
+                  pb="2px"
+                  pl="2.5"
+                  rounded="l2"
+                  borderWidth="1px"
+                  borderColor="var(--gray-200, #E4E4E7)"
+                  onClick={() => setCartOpen(false)}
+                >
+                  <LuX style={{ width: "24px", height: "24px" }} />
+                </IconButton>
               </Flex>
-              <Box p="4">
-                <Text color="fg.muted">Your Cart Drawer</Text>
-              </Box>
+              <Flex
+                direction="column"
+                w="593px"
+                h="655.33px"
+                gap="10px"
+                pt="24px"
+                pr="6"
+                pb="24px"
+                pl="6"
+              >
+                <Stack
+                  w="545px"
+                  h="607.33px"
+                  gap="124px"
+                >
+                  <Stack
+                    w="545px"
+                    h="341.33px"
+                    gap="40px"
+                  >
+                    {/* Item 1 */}
+                    <HStack
+                      w="545px"
+                      h="150.665px"
+                      gap="22px"
+                      align="flex-start"
+                    >
+                      {/* Picture Container */}
+                      <Box
+                        w="148px"
+                        h="150.665px"
+                        bg="#FFFFFF"
+                        rounded="13.42px"
+                        overflow="hidden"
+                        position="relative"
+                      >
+                        <Box
+                          as="img"
+                          src="/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg"
+                          alt="Cashmere Blend Coat"
+                          w="150.15371704101562px"
+                          h="224.9559783935547px"
+                          position="absolute"
+                          top="-7.35px"
+                          objectFit="cover"
+                        />
+                      </Box>
+
+                      {/* Details Container */}
+                      <Stack
+                        w="376px"
+                        h="150.665px"
+                        gap="40px"
+                      >
+                        <HStack
+                          w="376px"
+                          h="32px"
+                          justify="space-between"
+                          align="center"
+                        >
+                          <Text
+                            w="256px"
+                            h="32px"
+                            fontFamily="body"
+                            fontWeight="medium"
+                            fontSize="2xl"
+                            lineHeight="32px"
+                            letterSpacing="0%"
+                            verticalAlign="middle"
+                            color="var(--text-fg, #000000)"
+                          >
+                            Cashmere Blend Coat
+                          </Text>
+                          <IconButton
+                            aria-label="Remove item"
+                            variant="ghost"
+                            size="xs"
+                            colorPalette="gray"
+                            w="24px"
+                            h="24px"
+                            minW="24px"
+                            p="0"
+                            rounded="l2"
+                            onClick={() => {
+                              // Action: Swap overlay: "Empty Cart Drawer"
+                              setCartOpen(false);
+                            }}
+                          >
+                            <Icon
+                              as={LuX}
+                              w="24px"
+                              h="24px"
+                              strokeWidth="1.5px"
+                              color="var(--gray-400, #A1A1AA)"
+                            />
+                          </IconButton>
+                        </HStack>
+
+                        {/* Quantity and Price Section */}
+                        <HStack
+                          w="376px"
+                          h="78.665px"
+                          gap="80px"
+                          align="center"
+                        >
+                          {/* Quantity Selector */}
+                          <Box
+                            w="193px"
+                            h="54px"
+                            rounded="8px"
+                            borderWidth="1px"
+                            borderColor="var(--gray-200, #E4E4E7)"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                          >
+                            <HStack
+                              w="177px"
+                              h="52px"
+                              gap="0"
+                              align="center"
+                            >
+                              <Box
+                                w="52px"
+                                h="52px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                cursor="pointer"
+                                onClick={() => {}}
+                              >
+                                <Icon as={LuMinus} w="12px" h="12px" strokeWidth="2px" color="#111827" />
+                              </Box>
+
+                              <Box
+                                w="73px"
+                                h="28px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                              >
+                                <Text
+                                  fontFamily="body"
+                                  fontWeight="500"
+                                  fontSize="lg"
+                                  lineHeight="28px"
+                                  letterSpacing="0%"
+                                  textAlign="center"
+                                  color="var(--gray-900, #18181B)"
+                                >
+                                  1
+                                </Text>
+                              </Box>
+
+                              <Box
+                                w="52px"
+                                h="52px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                cursor="pointer"
+                                onClick={() => {}}
+                              >
+                                <Icon as={LuPlus} w="12px" h="12px" strokeWidth="2px" color="#111827" />
+                              </Box>
+                            </HStack>
+                          </Box>
+
+                          {/* Price Section */}
+                          <Stack
+                            w="103px"
+                            h="78.665px"
+                            gap="16px"
+                            justify="center"
+                          >
+                            <Box w="103px" h="32.665px" pb="0.67px">
+                              <Text
+                                w="103px"
+                                h="32px"
+                                fontFamily="body"
+                                fontWeight="bold"
+                                fontSize="2xl"
+                                lineHeight="32px"
+                                letterSpacing="0%"
+                                verticalAlign="middle"
+                                color="var(--gray-950, #111111)"
+                              >
+                                $389.00
+                              </Text>
+                            </Box>
+                            <Box w="80px" h="30px">
+                              <Text
+                                w="80px"
+                                h="30px"
+                                fontFamily="body"
+                                fontWeight="normal"
+                                fontSize="xl"
+                                lineHeight="30px"
+                                letterSpacing="0%"
+                                verticalAlign="middle"
+                                color="var(--gray-500, #71717A)"
+                              >
+                                $520.00
+                              </Text>
+                            </Box>
+                          </Stack>
+                        </HStack>
+                      </Stack>
+                    </HStack>
+
+                    {/* Item 2 */}
+                    <HStack
+                      w="545px"
+                      h="150.665px"
+                      gap="22px"
+                      align="flex-start"
+                    >
+                      {/* Picture Container */}
+                      <Box
+                        w="148px"
+                        h="150.665px"
+                        bg="#FFFFFF"
+                        rounded="13.42px"
+                        overflow="hidden"
+                        position="relative"
+                      >
+                        <Box
+                          as="img"
+                          src="/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"
+                          alt="Linen Shirt"
+                          w="150.15371704101562px"
+                          h="224.9559783935547px"
+                          position="absolute"
+                          top="-87px"
+                          left="9px"
+                          objectFit="cover"
+                        />
+                      </Box>
+
+                      {/* Details Container */}
+                      <Stack
+                        w="376px"
+                        h="150.665px"
+                        gap="40px"
+                      >
+                        <HStack
+                          w="376px"
+                          h="32px"
+                          justify="space-between"
+                          align="center"
+                        >
+                          <Text
+                            w="256px"
+                            h="32px"
+                            fontFamily="body"
+                            fontWeight="medium"
+                            fontSize="2xl"
+                            lineHeight="32px"
+                            letterSpacing="0%"
+                            verticalAlign="middle"
+                            color="var(--text-fg, #000000)"
+                          >
+                           Cashmere Blend Coat
+                          </Text>
+                          <IconButton
+                            aria-label="Remove item"
+                            variant="ghost"
+                            size="xs"
+                            colorPalette="gray"
+                            w="24px"
+                            h="24px"
+                            minW="24px"
+                            p="0"
+                            rounded="l2"
+                            onClick={() => {
+                              setCartOpen(false);
+                            }}
+                          >
+                            <Icon
+                              as={LuX}
+                              w="24px"
+                              h="24px"
+                              strokeWidth="1.5px"
+                              color="var(--gray-400, #A1A1AA)"
+                            />
+                          </IconButton>
+                        </HStack>
+
+                        {/* Quantity and Price Section */}
+                        <HStack
+                          w="376px"
+                          h="78.665px"
+                          gap="80px"
+                          align="center"
+                        >
+                          {/* Quantity Selector */}
+                          <Box
+                            w="193px"
+                            h="54px"
+                            rounded="8px"
+                            borderWidth="1px"
+                            borderColor="var(--gray-200, #E4E4E7)"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                          >
+                            <HStack
+                              w="177px"
+                              h="52px"
+                              gap="0"
+                              align="center"
+                            >
+                              <Box
+                                w="52px"
+                                h="52px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                cursor="pointer"
+                                onClick={() => {}}
+                              >
+                                <Icon as={LuMinus} w="12px" h="12px" strokeWidth="2px" color="#111827" />
+                              </Box>
+
+                              <Box
+                                w="73px"
+                                h="28px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                              >
+                                <Text
+                                  fontFamily="body"
+                                  fontWeight="500"
+                                  fontSize="lg"
+                                  lineHeight="28px"
+                                  letterSpacing="0%"
+                                  textAlign="center"
+                                  color="var(--gray-900, #18181B)"
+                                >
+                                  1
+                                </Text>
+                              </Box>
+
+                              <Box
+                                w="52px"
+                                h="52px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                cursor="pointer"
+                                onClick={() => {}}
+                              >
+                                <Icon as={LuPlus} w="12px" h="12px" strokeWidth="2px" color="#111827" />
+                              </Box>
+                            </HStack>
+                          </Box>
+
+                          {/* Price Section */}
+                          <Stack
+                            w="103px"
+                            h="78.665px"
+                            gap="16px"
+                            justify="center"
+                          >
+                            <Box w="103px" h="32.665px" pb="0.67px">
+                              <Text
+                                w="103px"
+                                h="32px"
+                                fontFamily="body"
+                                fontWeight="bold"
+                                fontSize="2xl"
+                                lineHeight="32px"
+                                letterSpacing="0%"
+                                verticalAlign="middle"
+                                color="var(--gray-950, #111111)"
+                              >
+                                $389.00
+                              </Text>
+                            </Box>
+                            <Box w="80px" h="30px">
+                              <Text
+                                w="80px"
+                                h="30px"
+                                fontFamily="body"
+                                fontWeight="normal"
+                                fontSize="xl"
+                                lineHeight="30px"
+                                letterSpacing="0%"
+                                verticalAlign="middle"
+                                color="var(--gray-500, #71717A)"
+                              >
+                                $520.00
+                              </Text>
+                            </Box>
+                          </Stack>
+                        </HStack>
+                      </Stack>
+                    </HStack>
+                  </Stack>
+
+                  {/* Summary Section */}
+                  <Stack
+                    w="545px"
+                    h="142px"
+                    gap="20px"
+                  >
+                    <Stack
+                      w="545px"
+                      h="81px"
+                      gap="20px"
+                    >
+                      {/* Subtotal */}
+                      <HStack
+                        w="545px"
+                        h="20px"
+                        justify="space-between"
+                        align="center"
+                      >
+                        <Text
+                          w="74px"
+                          h="20px"
+                          fontFamily="body"
+                          fontWeight="normal"
+                          fontSize="sm"
+                          lineHeight="20px"
+                          letterSpacing="0%"
+                          color="var(--text-fg_muted, #52525B)"
+                        >
+                          Subtotal
+                        </Text>
+                        <Text
+                          w="74px"
+                          h="20px"
+                          fontFamily="body"
+                          fontWeight="medium"
+                          fontSize="sm"
+                          lineHeight="20px"
+                          letterSpacing="0%"
+                          textAlign="right"
+                          color="var(--gray-900, #18181B)"
+                        >
+                          $1556.00
+                        </Text>
+                      </HStack>
+
+                      {/* Shipping */}
+                      <HStack
+                        w="545px"
+                        h="20px"
+                        justify="space-between"
+                        align="center"
+                      >
+                        <Text
+                          w="74px"
+                          h="20px"
+                          fontFamily="body"
+                          fontWeight="normal"
+                          fontSize="sm"
+                          lineHeight="20px"
+                          letterSpacing="0%"
+                          color="var(--text-fg_muted, #52525B)"
+                        >
+                          Shipping
+                        </Text>
+                        <Text
+                          w="74px"
+                          h="20px"
+                          fontFamily="body"
+                          fontWeight="medium"
+                          fontSize="sm"
+                          lineHeight="20px"
+                          letterSpacing="0%"
+                          textAlign="right"
+                          color="var(--green-solid, #16A34A)"
+                        >
+                          Free
+                        </Text>
+                      </HStack>
+                    </Stack>
+
+                    {/* Divider Line */}
+                    <Box
+                      w="545px"
+                      h="1px"
+                      bg="var(--gray-200, #E4E4E7)"
+                    />
+
+                    {/* Total */}
+                    <HStack
+                      w="545px"
+                      h="20px"
+                      justify="space-between"
+                      align="center"
+                    >
+                      <Text
+                        w="74px"
+                        h="20px"
+                        fontFamily="body"
+                        fontWeight="semibold"
+                        fontSize="sm"
+                        lineHeight="20px"
+                        letterSpacing="0%"
+                        color="var(--gray-900, #18181B)"
+                      >
+                        Total
+                      </Text>
+                      <Text
+                        w="74px"
+                        h="20px"
+                        fontFamily="body"
+                        fontWeight="semibold"
+                        fontSize="sm"
+                        lineHeight="20px"
+                        letterSpacing="0%"
+                        textAlign="right"
+                        color="var(--gray-900, #18181B)"
+                      >
+                        $1556.00
+                      </Text>
+                    </HStack>
+                  </Stack>
+                </Stack>
+
+                {/* Checkout Section */}
+                <Stack
+                  w="593px"
+                  h="144px"
+                  gap="16px"
+                  pt="24px"
+                  pr="6"
+                  pb="24px"
+                  pl="6"
+                >
+                  <Button
+                    w="545px"
+                    h="40px"
+                    minW="40px"
+                    bg="var(--gray-solid, #18181B)"
+                    color="white"
+                    rounded="l2"
+                    pt="2px"
+                    pr="4"
+                    pb="2px"
+                    pl="4"
+                    gap="8px"
+                    _hover={{ bg: "black" }}
+                  >
+                    <Text
+                      w="513px"
+                      h="20px"
+                      fontFamily="body"
+                      fontWeight="medium"
+                      fontSize="sm"
+                      lineHeight="20px"
+                      letterSpacing="0%"
+                      textAlign="center"
+                      color="var(--gray-contrast, #FFFFFF)"
+                    >
+                      Checkout
+                    </Text>
+                  </Button>
+                  <Button
+                    w="545px"
+                    h="40px"
+                    minW="40px"
+                    bg="var(--gray-subtle, #F4F4F5)"
+                    color="var(--gray-fg, #27272A)"
+                    rounded="l2"
+                    pt="2px"
+                    pr="4"
+                    pb="2px"
+                    pl="4"
+                    gap="8px"
+                    _hover={{ bg: "#E4E4E7" }}
+                    onClick={() => setCartOpen(false)}
+                  >
+                    <Text
+                      w="513px"
+                      h="20px"
+                      fontFamily="body"
+                      fontWeight="medium"
+                      fontSize="sm"
+                      lineHeight="20px"
+                      letterSpacing="0%"
+                      textAlign="center"
+                    >
+                      Continue Shopping
+                    </Text>
+                  </Button>
+                </Stack>
+              </Flex>
             </Box>
           </Portal>
         </Flex>
