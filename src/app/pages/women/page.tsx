@@ -94,9 +94,27 @@ const WomenPage = () => {
                 Shop
               </Text>
             </Box>
+            
             <Box w="16px" h="16px" display="flex" alignItems="center" justifyContent="center">
               <ChevronRight size={16} strokeWidth={1.33} color="var(--gray-500, #71717A)" />
             </Box>
+
+<Box w="35px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
+              <Text
+                w="35px"
+                h="20px"
+                fontFamily="body"
+                fontWeight="normal"
+                fontSize="sm"
+                lineHeight="20px"
+                letterSpacing="0%"
+                color="var(--gray-500, #71717A)"
+                verticalAlign="middle"
+              >
+              men
+              </Text>
+            </Box>
+
           </HStack>
 
           <HStack w="270px" h="36px" gap="16px" align="center" justify="flex-end">
