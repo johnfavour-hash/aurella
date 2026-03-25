@@ -18,7 +18,7 @@ const LoginPage = () => {
     const { mutateAsync: login, isPending } = AuthHook.useLogin({
         onSuccess: (data) => {
             setAuth(data as AuthState);
-            navigate("/");
+            navigate("/checkout");
         }
     });
 
@@ -271,35 +271,32 @@ const LoginPage = () => {
                                         </Link>
                                     </HStack>
                                 </Stack>
-                            </Stack>
-                        </form>
 
-                        {/* Button and Signup Section */}
-                        <Stack w="462px" h="100px" gap="16px">
-                            {/* Login Button */}
-                            <SubmitButton 
-                                loading={isPending} 
-                                loadingText="Logging in" 
-                                onClick={() => handleSubmit(onSubmit)()}
-                                w="462px"
-                                h="64px"
-                                minW="64px"
-                                bg="var(--gray-solid, #18181B)"
-                                color="var(--gray-contrast, #FFFFFF)"
-                                borderRadius="l2"
-                                fontSize="lg"
-                                fontWeight="500"
-                                lineHeight="28px"
-                                textAlign="center"
-                                gap="12px"
-                                py="2px"
-                                px="28px"
-                                _hover={{
-                                    bg: "var(--gray-950, #09090b)"
-                                }}
-                            >
-                                Login
-                            </SubmitButton>
+                            {/* Button and Signup Section */}
+                            <Stack w="462px" h="100px" gap="16px">
+                                {/* Login Button */}
+                                    <SubmitButton 
+                                    loading={isPending} 
+                                    loadingText="Logging in"
+                                    w="462px"
+                                    h="64px"
+                                    minW="64px"
+                                    bg="var(--gray-solid, #18181B)"
+                                    color="var(--gray-contrast, #FFFFFF)"
+                                    borderRadius="l2"
+                                    fontSize="lg"
+                                    fontWeight="500"
+                                    lineHeight="28px"
+                                    textAlign="center"
+                                    gap="12px"
+                                    py="2px"
+                                    px="28px"
+                                    _hover={{
+                                        bg: "var(--gray-950, #09090b)"
+                                    }}
+                                >
+                                    Login
+                                </SubmitButton>
 
                             {/* Signup Link Section */}
                             <HStack w="full" h="20px" gap="4px" justify="center">
@@ -328,6 +325,8 @@ const LoginPage = () => {
                                 </Link>
                             </HStack>
                         </Stack>
+                    </Stack>
+                        </form>
                     </Stack>
                 </Flex>
             </Box>
