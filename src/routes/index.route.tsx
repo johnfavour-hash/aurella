@@ -10,6 +10,7 @@ const WomenPage = lazy(() => import("../app/pages/women/page"));
 const MenPage = lazy(() => import("../app/pages/men/page"));
 const AccessoriesPage = lazy(() => import("../app/pages/accessories/page"));
 const CheckoutPage = lazy(() => import("../app/pages/checkout/page"));
+const ProductDetailsPage = lazy(() => import("../app/pages/product-details/page"));
 
 
 const Router = () => {
@@ -26,6 +27,7 @@ const Router = () => {
                     <Route path="/men" element={<MenPage />} />
                     <Route path="/accessories" element={<AccessoriesPage />} />
                     <Route path="/checkout" element={<CheckoutPage />} />
+                    <Route path="/product/:id" element={<ProductDetailsPage />} />
                 </Route>
             </Routes>
 

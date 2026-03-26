@@ -2,6 +2,7 @@ import { Box, Stack, Text, HStack, Slider, Button, Icon } from "@chakra-ui/react
 import { ChevronRight, LayoutGrid, List, ChevronDown, ChevronLeft, MoreHorizontal } from "lucide-react"
 import Subscribe from "@components/shared/subscribe/Subscribe"
 import Footer from "@components/shared/layout/Footer"
+import { Link } from "react-router"
 
 const MenPage = () => {
   return (
@@ -353,18 +354,19 @@ const MenPage = () => {
                   borderColor="#E4E4E7"
                 >
                   <Box w="292px" h="175px" position="relative">
-                    <img
-                      src={i % 2 === 0 ? "/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg" : "/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"}
-                      alt="Featured item"
-                      style={{
-                        width: "292px",
-                        height: "175px",
-                        objectFit: "cover",
-                        borderTopLeftRadius: "12px",
-                        borderTopRightRadius: "12px",
-                        ...(i % 2 === 0 ? { objectPosition: "center 13%" } : {})
-                      }}
-                    />
+                    <Link to={`/product/${i}`}>
+                      <Box
+                        as="img"
+                        src={i % 2 === 0 ? "/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg" : "/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"}
+                        alt="Featured item"
+                        w="292px"
+                        h="175px"
+                        objectFit="cover"
+                        borderTopLeftRadius="12px"
+                        borderTopRightRadius="12px"
+                        objectPosition={i % 2 === 0 ? "center 13%" : "center"}
+                      />
+                    </Link>
                     {i % 2 !== 0 ? (
                       <Box
                         position="absolute"
@@ -407,7 +409,7 @@ const MenPage = () => {
                     <Stack w="244px" h="196px" gap="20px">
                       <Stack w="244px" h="136px" gap="8px">
                         <Text fontFamily="body" fontWeight="500" fontSize="lg" lineHeight="28px" letterSpacing="0" color="#000000" w="187px" h="28px">
-                          Cashmere Blend Coat
+                          <Link to={`/product/${i}`}>Cashmere Blend Coat</Link>
                         </Text>
                         <Text fontFamily="body" fontWeight="normal" fontSize="sm" lineHeight="20px" letterSpacing="0" color="#52525B" w="244px" h="60px">
                           A timeless coat crafted from a soft cashmere blend for warmth, comfort, and effortless elegance.
