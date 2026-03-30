@@ -4,9 +4,9 @@ import { LuArrowRight } from "react-icons/lu"
 
 const ShopByCategory = () => {
   return (
-    <Box w="1440px" h="561px" mx="auto" px="100px" py="40px" bg="white">
-      <Stack w="1240px" h="481px" gap="29px">
-        <Flex w="1240px" h="72px" justify="space-between">
+    <Box w="full" maxW="1440px" minH="561px" h="auto" mx="auto" px={{ base: 4, md: 8, xl: "100px" }} py="40px" bg="white">
+      <Stack w="full" maxW="1240px" mx="auto" h="481px" gap="29px">
+        <Flex w="full" maxW="1240px" mx="auto" h="72px" justify="space-between">
           <Stack w="348.2254943847656px" h="72px" gap="8px">
             <Text
               fontFamily="body"
@@ -65,10 +65,10 @@ const ShopByCategory = () => {
             </HStack>
           </LinkButton>
         </Flex>
-        <Flex w="1240px" h="380px" gap="24px">
+        <Flex w="full" maxW="1240px" mx="auto" h="380px" gap="24px">
           {/* Category 1: Women */}
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="380px"
             gap="10px"
             p="24px"
@@ -123,7 +123,7 @@ const ShopByCategory = () => {
 
           {/* Category 2: Men */}
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="380px"
             gap="10px"
             p="24px"
@@ -178,7 +178,7 @@ const ShopByCategory = () => {
 
           {/* Category 3: Accessories */}
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="380px"
             gap="10px"
             p="24px"
@@ -233,7 +233,7 @@ const ShopByCategory = () => {
 
           {/* Category 4: Shoes */}
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="380px"
             gap="10px"
             p="24px"

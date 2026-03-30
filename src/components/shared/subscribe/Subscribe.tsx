@@ -3,13 +3,13 @@ import { LuArrowRight } from "react-icons/lu"
 
 const Subscribe = () => {
   return (
-    <Box 
-      w="1440px" 
-      h="416px" 
-      mx="auto" 
-      px="436px" 
-      py="116px" 
-      bg="var(--gray-950, #111111)" 
+    <Box
+      w="full" maxW="1440px"
+      h="416px"
+      mx="auto"
+      px="436px"
+      py="116px"
+      bg="var(--gray-950, #111111)"
       opacity="1"
     >
       <Stack w="568px" h="184px" gap="32px" align="center">

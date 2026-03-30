@@ -28,7 +28,7 @@ const LoginPage = () => {
 
     return (
         <Box 
-            w="1440px" 
+            w="full" maxW="1440px" mx="auto" 
             h="1024px" 
             position="relative" 
             bg="gray.50"
@@ -36,7 +36,7 @@ const LoginPage = () => {
         >
             {/* Background Image Layout */}
             <Box 
-                w="1440px" 
+                w="full" maxW="1440px" mx="auto" 
                 h="1024px" 
                 position="absolute" 
                 top="0" 

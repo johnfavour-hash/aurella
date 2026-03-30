@@ -4,9 +4,9 @@ import { LuArrowRight } from "react-icons/lu"
 
 const FeaturedCollection = () => {
   return (
-    <Box w="1440px" h="595px" mx="auto" px="100px" py="40px">
+    <Box w="full" maxW="1440px" minH="595px" h="auto" mx="auto" px={{ base: 4, md: 8, xl: "100px" }} py="40px">
       <Stack gap="24px">
-        <Flex w="1240px" h="72px" align="center" justify="space-between">
+        <Flex w="full" maxW="1240px" mx="auto" h="72px" align="center" justify="space-between">
           <Box w="348.2254943847656px" h="72px">
             <Stack gap="8px" w="348.2254943847656px" h="72px">
               <Text
@@ -71,20 +71,20 @@ const FeaturedCollection = () => {
           </LinkButton>
         </Flex>
 
-        <Flex w="1240px" h="419px" gap="24px">
+        <Flex w="full" maxW="1240px" mx="auto" h="419px" gap="24px">
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="419px"
             bg="#FFFFFF"
             rounded="l3"
             borderWidth="1px"
             borderColor="#E4E4E7"
           >
-            <Box w="292px" h="175px" position="relative">
+            <Box w="full" maxW="292px" mx="auto" h="175px" position="relative">
               <Image
                 src="/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"
                 alt="Featured item"
-                w="292px"
+                w="full" maxW="292px" mx="auto"
                 h="175px"
                 objectFit="cover"
                 roundedTop="l3"
@@ -118,7 +118,7 @@ const FeaturedCollection = () => {
                 </Text>
               </Button>
             </Box>
-            <Box w="292px" h="244px" p="24px">
+            <Box w="full" maxW="292px" mx="auto" h="244px" p="24px">
               <Stack w="244px" h="196px" gap="20px">
                 <Stack w="244px" h="136px" gap="8px">
                   <Text
@@ -213,18 +213,18 @@ const FeaturedCollection = () => {
             </Box>
           </Box>
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="419px"
             bg="#FFFFFF"
             rounded="l3"
             borderWidth="1px"
             borderColor="#E4E4E7"
           >
-            <Box w="292px" h="175px" position="relative">
+            <Box w="full" maxW="292px" mx="auto" h="175px" position="relative">
               <Image
                 src="/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg"
                 alt="Featured item"
-                w="292px"
+                w="full" maxW="292px" mx="auto"
                 h="175px"
                 objectFit="cover"
                 objectPosition="center 13%"
@@ -261,7 +261,7 @@ const FeaturedCollection = () => {
                 </Text>
               </Button>
             </Box>
-            <Box w="292px" h="244px" p="24px">
+            <Box w="full" maxW="292px" mx="auto" h="244px" p="24px">
               <Stack w="244px" h="196px" gap="20px">
                 <Stack w="244px" h="136px" gap="8px">
                   <Text
@@ -357,18 +357,18 @@ const FeaturedCollection = () => {
           </Box>
 
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="419px"
             bg="#FFFFFF"
             rounded="l3"
             borderWidth="1px"
             borderColor="#E4E4E7"
           >
-            <Box w="292px" h="175px" position="relative">
+            <Box w="full" maxW="292px" mx="auto" h="175px" position="relative">
               <Image
                 src="/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"
                 alt="Featured item"
-                w="292px"
+                w="full" maxW="292px" mx="auto"
                 h="175px"
                 objectFit="cover"
                 roundedTop="l3"
@@ -402,7 +402,7 @@ const FeaturedCollection = () => {
                 </Text>
               </Button>
             </Box>
-            <Box w="292px" h="244px" p="24px">
+            <Box w="full" maxW="292px" mx="auto" h="244px" p="24px">
               <Stack w="244px" h="196px" gap="20px">
                 <Stack w="244px" h="136px" gap="8px">
                   <Text
@@ -498,18 +498,18 @@ const FeaturedCollection = () => {
           </Box>
 
           <Box
-            w="292px"
+            w="full" maxW="292px" mx="auto"
             h="419px"
             bg="#FFFFFF"
             rounded="l3"
             borderWidth="1px"
             borderColor="#E4E4E7"
           >
-            <Box w="292px" h="175px" position="relative">
+            <Box w="full" maxW="292px" mx="auto" h="175px" position="relative">
               <Image
                 src="/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg"
                 alt="Featured item"
-                w="292px"
+                w="full" maxW="292px" mx="auto"
                 h="175px"
                 objectFit="cover"
                 objectPosition="center 13%"
@@ -546,7 +546,7 @@ const FeaturedCollection = () => {
                 </Text>
               </Button>
             </Box>
-            <Box w="292px" h="244px" p="24px">
+            <Box w="full" maxW="292px" mx="auto" h="244px" p="24px">
               <Stack w="244px" h="196px" gap="20px">
                 <Stack w="244px" h="136px" gap="8px">
                   <Text

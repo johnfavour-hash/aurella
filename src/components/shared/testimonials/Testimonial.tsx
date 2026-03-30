@@ -2,20 +2,20 @@ import { Box, Stack, Text, HStack, Image } from "@chakra-ui/react"
 
 const Testimonial = () => {
   return (
-    <Box 
-      w="1440px" 
-      h="459.2px" 
-      mx="auto" 
-      px="100px" 
-      py="40px" 
-      bg="white" 
+    <Box
+      w="full" maxW="1440px" mx="auto"
+      h="459.2px"
+      mx="auto"
+      px={{ base: 4, md: 8, xl: "100px" }}
+      py="40px"
+      bg="white"
       opacity="1"
     >
-      <Stack w="1240px" h="379.2px" gap="34px" align="center">
+      <Stack w="full" maxW="1240px" mx="auto" h="379.2px" gap="34px" align="center">
         {/* Header Text Layout */}
-        <Stack w="1240px" h="72px" gap="8px" align="center">
+        <Stack w="full" maxW="1240px" mx="auto" h="72px" gap="8px" align="center">
           <Text
-            w="1240px"
+            w="full" maxW="1240px" mx="auto"
             h="40px"
             fontFamily="body"
             fontWeight="500"
@@ -29,7 +29,7 @@ const Testimonial = () => {
             What Our Customers Say
           </Text>
           <Text
-            w="1240px"
+            w="full" maxW="1240px" mx="auto"
             h="24px"
             fontFamily="body"
             fontWeight="normal"
@@ -45,32 +45,32 @@ const Testimonial = () => {
         </Stack>
 
         {/* Testimonials Layout */}
-        <HStack w="1240px" h="273.20001220703125px" gap="24px" align="flex-start">
+        <Stack direction={{ base: "column", lg: "row" }} w="full" maxW="1240px" mx="auto" h="273.20001220703125px" gap="24px" align="flex-start">
           {/* First Testimonial */}
-          <Box 
-            w="397.3333435058594px" 
-            h="273.20001220703125px" 
-            bg="var(--gray-100, #F4F4F5)" 
-            borderRadius="16px" 
+          <Box
+            w="397.3333435058594px"
+            h="273.20001220703125px"
+            bg="var(--gray-100, #F4F4F5)"
+            borderRadius="16px"
             p="24px"
           >
             <Stack w="349.3333435058594px" h="225.1999969482422px" gap="12px">
               {/* Quote Vector */}
               <Box w="40px" h="40px" position="relative">
-                <Image 
-                  src="/images/Vector (2).png" 
-                  alt="quote" 
-                  w="11.666666030883789px" 
-                  h="30px" 
+                <Image
+                  src="/images/Vector (2).png"
+                  alt="quote"
+                  w="11.666666030883789px"
+                  h="30px"
                   position="absolute"
                   top="5px"
                   left="5px"
                 />
-                <Image 
-                  src="/images/Vector (2).png" 
-                  alt="quote" 
-                  w="11.666666030883789px" 
-                  h="30px" 
+                <Image
+                  src="/images/Vector (2).png"
+                  alt="quote"
+                  w="11.666666030883789px"
+                  h="30px"
                   position="absolute"
                   top="5px"
                   left="23.33px"
@@ -136,30 +136,30 @@ const Testimonial = () => {
           </Box>
 
           {/* Second Testimonial */}
-          <Box 
-            w="397.3333435058594px" 
-            h="273.20001220703125px" 
-            bg="var(--gray-100, #F4F4F5)" 
-            borderRadius="16px" 
+          <Box
+            w="397.3333435058594px"
+            h="273.20001220703125px"
+            bg="var(--gray-100, #F4F4F5)"
+            borderRadius="16px"
             p="24px"
           >
             <Stack w="349.3333435058594px" h="225.1999969482422px" gap="12px">
               {/* Quote Vector */}
               <Box w="40px" h="40px" position="relative">
-                <Image 
-                  src="/images/Vector (2).png" 
-                  alt="quote" 
-                  w="11.666666030883789px" 
-                  h="30px" 
+                <Image
+                  src="/images/Vector (2).png"
+                  alt="quote"
+                  w="11.666666030883789px"
+                  h="30px"
                   position="absolute"
                   top="5px"
                   left="5px"
                 />
-                <Image 
-                  src="/images/Vector (2).png" 
-                  alt="quote" 
-                  w="11.666666030883789px" 
-                  h="30px" 
+                <Image
+                  src="/images/Vector (2).png"
+                  alt="quote"
+                  w="11.666666030883789px"
+                  h="30px"
                   position="absolute"
                   top="5px"
                   left="23.33px"
@@ -225,30 +225,30 @@ const Testimonial = () => {
           </Box>
 
           {/* Third Testimonial */}
-          <Box 
-            w="397.3333435058594px" 
-            h="273.20001220703125px" 
-            bg="var(--gray-100, #F4F4F5)" 
-            borderRadius="16px" 
+          <Box
+            w="397.3333435058594px"
+            h="273.20001220703125px"
+            bg="var(--gray-100, #F4F4F5)"
+            borderRadius="16px"
             p="24px"
           >
             <Stack w="349.3333435058594px" h="225.1999969482422px" gap="12px">
               {/* Quote Vector */}
               <Box w="40px" h="40px" position="relative">
-                <Image 
-                  src="/images/Vector (2).png" 
-                  alt="quote" 
-                  w="11.666666030883789px" 
-                  h="30px" 
+                <Image
+                  src="/images/Vector (2).png"
+                  alt="quote"
+                  w="11.666666030883789px"
+                  h="30px"
                   position="absolute"
                   top="5px"
                   left="5px"
                 />
-                <Image 
-                  src="/images/Vector (2).png" 
-                  alt="quote" 
-                  w="11.666666030883789px" 
-                  h="30px" 
+                <Image
+                  src="/images/Vector (2).png"
+                  alt="quote"
+                  w="11.666666030883789px"
+                  h="30px"
                   position="absolute"
                   top="5px"
                   left="23.33px"
@@ -312,7 +312,7 @@ const Testimonial = () => {
               </Stack>
             </Stack>
           </Box>
-        </HStack>
+        </Stack>
       </Stack>
     </Box>
   )

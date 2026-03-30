@@ -2,7 +2,7 @@ import { Box, Heading, Text, Stack, HStack, Icon } from "@chakra-ui/react"
 import LinkButton from "@components/shared/buttons/LinkButton"
 import { LuTruck, LuRotateCcw, LuShieldCheck, LuClock, LuArrowRight } from "react-icons/lu"
 
- 
+
 
 const FreeShippingItem = () => (
   <Box w="168.18939208984375px" h="56px" p="10px">
@@ -239,10 +239,10 @@ const Hero = () => {
       </Box>
 
       <Box
-        w="1440px"
+        w="full" maxW="1440px"
         h="117px"
         mx="auto"
-        px="100px"
+        px={{ base: 4, md: 8, xl: "100px" }}
         py="24px"
         bg="#F4F4F5"
         borderWidth="1px"

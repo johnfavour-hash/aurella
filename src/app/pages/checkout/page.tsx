@@ -28,7 +28,7 @@ const CheckoutPage = () => {
     <Box w="full" maxW="1440px" mx="auto" display="flex" flexDirection="column">
 
       {/* Breadcrumb */}
-      <Box px="100px" pt="24px" pb="24px">
+      <Box px={{ base: 4, md: 8, xl: "100px" }} pt="24px" pb="24px">
         <HStack gap="8px" flexWrap="nowrap">
           {["Home", "Shop", "Checkout"].map((label, i, arr) => (
             <HStack key={label} gap="8px">
@@ -47,7 +47,7 @@ const CheckoutPage = () => {
 
       {/* Checkout heading */}
       <Text
-        px="100px"
+        px={{ base: 4, md: 8, xl: "100px" }}
         mb="32px"
         fontFamily="body"
         fontWeight="600"
@@ -60,7 +60,7 @@ const CheckoutPage = () => {
 
       {/* Two-column content row — Flex with direction="row" keeps columns side-by-side */}
       <Flex
-        px="100px"
+        px={{ base: 4, md: 8, xl: "100px" }}
         pb="80px"
         gap="48px"
         align="flex-start"

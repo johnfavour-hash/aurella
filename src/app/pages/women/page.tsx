@@ -1,4 +1,4 @@
-import { Box, Stack, Text, HStack, Slider, Button, Icon } from "@chakra-ui/react"
+import {  Box, Stack, Text, HStack, Slider, Button, Icon , Image } from "@chakra-ui/react"
 import { ChevronRight, LayoutGrid, List, ChevronDown, ChevronLeft, MoreHorizontal } from "lucide-react"
 import Subscribe from "@components/shared/subscribe/Subscribe"
 import Footer from "@components/shared/layout/Footer"
@@ -8,12 +8,12 @@ const WomenPage = () => {
   return (
     <>
       <Box
-        w="1440px"
+        w="full" maxW="1440px" mx="auto"
         h="208px"
         pt="64px"
-        pr="71.5px"
+        pr={{ base: 4, md: "71.5px" }}
         pb="64px"
-        pl="71.5px"
+        pl={{ base: 4, md: "71.5px" }}
         bg="var(--gray-200, #E4E4E7)"
         mx="auto"
         display="flex"
@@ -53,14 +53,14 @@ const WomenPage = () => {
       </Box>
 
       <Stack
-        w="1240px"
+        w="full" maxW="1240px" mx="auto"
         gap="40px"
         mx="auto"
         mt="80px"
         mb="80px"
       >
         {/* Breadcrumbs and Sort */}
-        <HStack w="1240px" h="36px" gap="40px" align="center" justify="space-between">
+        <Stack direction={{ base: "column", lg: "row" }} w="full" maxW="1240px" mx="auto" h="36px" gap="40px" align="center" justify="space-between">
           <HStack w="930px" h="20.665px" gap="8px" align="center">
             <Box w="40px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
               <Text
@@ -95,12 +95,12 @@ const WomenPage = () => {
                 Shop
               </Text>
             </Box>
-            
+
             <Box w="16px" h="16px" display="flex" alignItems="center" justifyContent="center">
               <ChevronRight size={16} strokeWidth={1.33} color="var(--gray-500, #71717A)" />
             </Box>
 
-<Box w="35px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
+            <Box w="35px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
               <Text
                 w="35px"
                 h="20px"
@@ -112,7 +112,7 @@ const WomenPage = () => {
                 color="var(--gray-500, #71717A)"
                 verticalAlign="middle"
               >
-              men
+                men
               </Text>
             </Box>
 
@@ -175,16 +175,16 @@ const WomenPage = () => {
               <ChevronDown size={20} color="var(--fg-muted, #52525B)" />
             </HStack>
           </HStack>
-        </HStack>
+        </Stack>
 
-        <HStack w="1240px" gap="40px" align="flex-start">
+        <Stack direction={{ base: "column", lg: "row" }} w="full" maxW="1240px" mx="auto" gap="40px" align="flex-start">
           {/* Sidebar */}
-          <Stack w="256px" gap="40px">
+          <Stack w="full" maxW="256px" gap="40px">
             {/* Category */}
-            <Stack w="256px" gap="16px">
-              <Box w="256px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
+            <Stack w="full" maxW="256px" gap="16px">
+              <Box w="full" maxW="256px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
                 <Text
-                  w="256px"
+                  w="full" maxW="256px"
                   h="20px"
                   fontFamily="body"
                   fontWeight="600"
@@ -197,9 +197,9 @@ const WomenPage = () => {
                   Category
                 </Text>
               </Box>
-              <Stack w="256px" gap="12px">
+              <Stack w="full" maxW="256px" gap="12px">
                 {["women", "men", "accessories", "shoes"].map((cat) => (
-                  <HStack key={cat} w="256px" h="20px" align="center">
+                  <HStack key={cat} w="full" maxW="256px" h="20px" align="center">
                     <Box w="16px" h="16px" borderWidth="1px" borderColor="#171717" rounded="4px" />
                     <Box flex="1" h="20px" pl="12px" display="flex" alignItems="center">
                       <Text
@@ -222,13 +222,13 @@ const WomenPage = () => {
               </Stack>
             </Stack>
 
-            <Box w="256px" h="1px" bg="var(--gray-200, #E4E4E7)" />
+            <Box w="full" maxW="256px" h="1px" bg="var(--gray-200, #E4E4E7)" />
 
             {/* Size */}
-            <Stack w="256px" gap="16px">
-              <Box w="256px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
+            <Stack w="full" maxW="256px" gap="16px">
+              <Box w="full" maxW="256px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
                 <Text
-                  w="256px"
+                  w="full" maxW="256px"
                   h="20px"
                   fontFamily="body"
                   fontWeight="600"
@@ -241,7 +241,7 @@ const WomenPage = () => {
                   Size
                 </Text>
               </Box>
-              <Box w="256px" display="grid" gridTemplateColumns="repeat(4, max-content)" gap="8px">
+              <Box w="full" maxW="256px" display="grid" gridTemplateColumns="repeat(4, max-content)" gap="8px">
                 {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                   <Box
                     key={size}
@@ -276,13 +276,13 @@ const WomenPage = () => {
               </Box>
             </Stack>
 
-            <Box w="256px" h="1px" bg="var(--gray-200, #E4E4E7)" />
+            <Box w="full" maxW="256px" h="1px" bg="var(--gray-200, #E4E4E7)" />
 
             {/* Price Range */}
-            <Stack w="256px" gap="16px">
-              <Box w="256px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
+            <Stack w="full" maxW="256px" gap="16px">
+              <Box w="full" maxW="256px" h="20.665px" pb="0.67px" display="flex" alignItems="center">
                 <Text
-                  w="256px"
+                  w="full" maxW="256px"
                   h="20px"
                   fontFamily="body"
                   fontWeight="600"
@@ -295,7 +295,7 @@ const WomenPage = () => {
                   Price Range
                 </Text>
               </Box>
-              <Box w="256px" h="16px" display="flex" gap="4px" alignItems="center" py="4px">
+              <Box w="full" maxW="256px" h="16px" display="flex" gap="4px" alignItems="center" py="4px">
                 <Slider.Root
                   defaultValue={[50]}
                   min={0}
@@ -304,7 +304,7 @@ const WomenPage = () => {
                   size="md"
                   colorPalette="gray"
                   variant="outline"
-                  w="256px"
+                  w="full" maxW="256px"
                 >
                   <Slider.Control>
                     <Slider.Track
@@ -327,7 +327,7 @@ const WomenPage = () => {
                   </Slider.Control>
                 </Slider.Root>
               </Box>
-              <HStack w="256px" h="20px" align="center" justify="space-between">
+              <HStack w="full" maxW="256px" h="20px" align="center" justify="space-between">
                 <Text
                   w="18px"
                   h="20px"
@@ -359,25 +359,24 @@ const WomenPage = () => {
           </Stack>
 
           {/* Product Grid and Pagination */}
-          <Stack w="944px" gap="40px">
-            <Box display="grid" gridTemplateColumns="repeat(3, 292px)" columnGap="20px" rowGap="20px">
+          <Stack w="full" maxW="944px" gap="40px">
+            <Box display="grid" gridTemplateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} w="full" columnGap="20px" rowGap="20px">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <Box
                   key={i}
-                  w="292px"
+                  w="full" maxW="292px" mx="auto"
                   h="419px"
                   bg="#FFFFFF"
                   rounded="l3"
                   borderWidth="1px"
                   borderColor="#E4E4E7"
                 >
-                  <Box w="292px" h="175px" position="relative">
+                  <Box w="full" maxW="292px" mx="auto" h="175px" position="relative">
                     <Link to={`/product/${i}`}>
-                      <Box
-                        as="img"
+                      <Image
                         src={i % 2 === 0 ? "/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg" : "/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"}
                         alt="Featured item"
-                        w="292px"
+                        w="full" maxW="292px" mx="auto"
                         h="175px"
                         objectFit="cover"
                         borderTopLeftRadius="12px"
@@ -423,7 +422,7 @@ const WomenPage = () => {
                       </Box>
                     )}
                   </Box>
-                  <Box w="292px" h="244px" p="24px">
+                  <Box w="full" maxW="292px" mx="auto" h="244px" p="24px">
                     <Stack w="244px" h="196px" gap="20px">
                       <Stack w="244px" h="136px" gap="8px">
                         <Text fontFamily="body" fontWeight="500" fontSize="lg" lineHeight="28px" letterSpacing="0" color="#000000" w="187px" h="28px">
@@ -664,13 +663,13 @@ const WomenPage = () => {
               </Button>
             </HStack>
           </Stack>
-        </HStack>
+        </Stack>
       </Stack>
 
       {/* New Section */}
       <Box
-        w="1440px"
-        h="868px"
+        w="full" maxW="1440px" mx="auto"
+        h="auto"
       >
         <Subscribe />
         <Footer />

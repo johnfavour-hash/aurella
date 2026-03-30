@@ -1,7 +1,7 @@
-import { Box, Container, Flex, HStack, IconButton, Text, Button, Menu, Portal, Stack, Icon } from "@chakra-ui/react"
+import { Box, Container, Flex, HStack, IconButton, Text, Button, Menu, Portal, Stack, Icon, Image } from "@chakra-ui/react"
 import * as React from "react"
 import { Link, useLocation, useNavigate } from "react-router"
-import { LuMenu, LuSearch, LuUser, LuShoppingCart, LuHeart, LuX, LuTrash2, LuMinus, LuPlus } from "react-icons/lu"
+import { LuMenu, LuSearch, LuUser, LuShoppingCart, LuHeart, LuX, LuMinus, LuPlus } from "react-icons/lu"
 import EmptyCart from "../cart/EmptyCart"
 
 const navLinks = [
@@ -40,8 +40,8 @@ const Header = () => {
 
   return (
     <Box position="sticky" top="36px" zIndex="10" bg="#FFFFFF" borderBottomWidth="1px" h="56px">
-      <Container maxW="1440px" px="100px" py="10px" mx="auto" w="full">
-        <Flex w="1240px" h="36px" align="center" justify="flex-start" gap="222px">
+      <Container maxW="1440px" px={{ base: 4, md: 8, xl: "100px" }} py="10px" mx="auto" w="full">
+        <Flex w="full" maxW="1240px" mx="auto" h="36px" align="center" justify="flex-start" gap="222px">
           <Box w="151.11703491210938px" h="28.799999237060547px" flex="0 0 151.11703491210938px" display="flex" alignItems="center">
             <Link to="/" style={{ transition: "all 300ms linear" }}>
               <Text
@@ -137,100 +137,100 @@ const Header = () => {
               justify="flex-start"
               flex="0 0 170.8828125px"
             >
-            <Box w="16px" h="16px" position="relative">
-              <Box
-                position="absolute"
-                top="0"
-                left="0"
-                w="16px"
-                h="16px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <IconButton aria-label="Search" variant="ghost" size="xs" p="0" minW="unset">
-                  <LuSearch style={{ width: "16px", height: "16px" }} />
-                </IconButton>
-              </Box>
-            </Box>
-
-            <Box w="16px" h="16px" position="relative">
-              <Box
-                position="absolute"
-                top="0"
-                left="0"
-                w="16px"
-                h="16px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <IconButton aria-label="Wishlist" variant="ghost" size="xs" p="0" minW="unset">
-                  <LuHeart style={{ width: "16px", height: "16px" }} />
-                </IconButton>
-              </Box>
-            </Box>
-
-            <Box w="16px" h="16px" position="relative">
-              <Box
-                position="absolute"
-                top="0"
-                left="0"
-                w="16px"
-                h="16px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <IconButton aria-label="Account" variant="ghost" size="xs" p="0" minW="unset">
-                  <LuUser style={{ width: "16px", height: "16px" }} />
-                </IconButton>
-              </Box>
-            </Box>
-
-            <Box w="16px" h="16px" position="relative">
-              <Box
-                position="absolute"
-                top="0"
-                left="0"
-                w="16px"
-                h="16px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <IconButton
-                  aria-label="Cart"
-                  variant="ghost"
-                  size="xs"
-                  p="0"
-                  minW="unset"
-                  onClick={() => setCartOpen(true)}
-                  style={{ transition: "all 0ms linear" }}
+              <Box w="16px" h="16px" position="relative">
+                <Box
+                  position="absolute"
+                  top="0"
+                  left="0"
+                  w="16px"
+                  h="16px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
                 >
-                  <LuShoppingCart style={{ width: "16px", height: "16px" }} />
-                </IconButton>
-              </Box>
-            </Box>
-
-            <Box display={{ base: "block", md: "none" }}>
-              <Menu.Root>
-                <Menu.Trigger asChild>
-                  <IconButton aria-label="Menu" variant="ghost" size="sm">
-                    <LuMenu />
+                  <IconButton aria-label="Search" variant="ghost" size="xs" p="0" minW="unset">
+                    <LuSearch style={{ width: "16px", height: "16px" }} />
                   </IconButton>
-                </Menu.Trigger>
-                <Menu.Positioner>
-                  <Menu.Content>
-                    {navLinks.map((item) => (
-                      <Menu.Item key={item.label} value={item.label} asChild>
-                        <Link to={item.to}>{item.label}</Link>
-                      </Menu.Item>
-                    ))}
-                  </Menu.Content>
-                </Menu.Positioner>
-              </Menu.Root>
-            </Box>
+                </Box>
+              </Box>
+
+              <Box w="16px" h="16px" position="relative">
+                <Box
+                  position="absolute"
+                  top="0"
+                  left="0"
+                  w="16px"
+                  h="16px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <IconButton aria-label="Wishlist" variant="ghost" size="xs" p="0" minW="unset">
+                    <LuHeart style={{ width: "16px", height: "16px" }} />
+                  </IconButton>
+                </Box>
+              </Box>
+
+              <Box w="16px" h="16px" position="relative">
+                <Box
+                  position="absolute"
+                  top="0"
+                  left="0"
+                  w="16px"
+                  h="16px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <IconButton aria-label="Account" variant="ghost" size="xs" p="0" minW="unset">
+                    <LuUser style={{ width: "16px", height: "16px" }} />
+                  </IconButton>
+                </Box>
+              </Box>
+
+              <Box w="16px" h="16px" position="relative">
+                <Box
+                  position="absolute"
+                  top="0"
+                  left="0"
+                  w="16px"
+                  h="16px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <IconButton
+                    aria-label="Cart"
+                    variant="ghost"
+                    size="xs"
+                    p="0"
+                    minW="unset"
+                    onClick={() => setCartOpen(true)}
+                    style={{ transition: "all 0ms linear" }}
+                  >
+                    <LuShoppingCart style={{ width: "16px", height: "16px" }} />
+                  </IconButton>
+                </Box>
+              </Box>
+
+              <Box display={{ base: "block", md: "none" }}>
+                <Menu.Root>
+                  <Menu.Trigger asChild>
+                    <IconButton aria-label="Menu" variant="ghost" size="sm">
+                      <LuMenu />
+                    </IconButton>
+                  </Menu.Trigger>
+                  <Menu.Positioner>
+                    <Menu.Content>
+                      {navLinks.map((item) => (
+                        <Menu.Item key={item.label} value={item.label} asChild>
+                          <Link to={item.to}>{item.label}</Link>
+                        </Menu.Item>
+                      ))}
+                    </Menu.Content>
+                  </Menu.Positioner>
+                </Menu.Root>
+              </Box>
             </HStack>
           </Box>
 
@@ -241,8 +241,9 @@ const Header = () => {
               position="fixed"
               top="0"
               right="0"
-              h="866px"
-              w="593px"
+              h="100dvh"
+              maxH="100dvh"
+              w={{ base: "full", sm: "593px" }}
               bg="#FFFFFF"
               borderLeftWidth="1px"
               borderColor="#E4E4E7"
@@ -297,8 +298,8 @@ const Header = () => {
               </Flex>
               <Flex
                 direction="column"
-                w="593px"
-                h="798px"
+                w="full"
+                h="calc(100% - 68px)"
                 gap="0"
               >
                 {cartItems.length === 0 ? (
@@ -314,16 +315,22 @@ const Header = () => {
                       pb="24px"
                       pl="6"
                       overflowY="auto"
+                      css={{
+                        "&::-webkit-scrollbar": { width: "4px" },
+                        "&::-webkit-scrollbar-track": { background: "transparent" },
+                        "&::-webkit-scrollbar-thumb": { background: "#E4E4E7", borderRadius: "10px" },
+                      }}
                     >
                       <Stack
-                        w="545px"
+                        w="full"
                         gap="40px"
                       >
                         {cartItems.map((item) => (
                           <HStack
                             key={item.id}
-                            w="545px"
-                            h="150.665px"
+                            w="full"
+                            h="auto"
+                            minH="150.665px"
                             gap="22px"
                             align="flex-start"
                           >
@@ -336,8 +343,7 @@ const Header = () => {
                               overflow="hidden"
                               position="relative"
                             >
-                              <Box
-                                as="img"
+                              <Image
                                 src={item.image}
                                 alt={item.name}
                                 w="150.15371704101562px"
@@ -351,18 +357,19 @@ const Header = () => {
 
                             {/* Details Container */}
                             <Stack
-                              w="376px"
-                              h="150.665px"
+                              flex="1"
+                              h="auto"
+                              minH="150.665px"
                               gap="40px"
                             >
                               <HStack
-                                w="376px"
-                                h="32px"
+                                w="full"
+                                h="auto"
                                 justify="space-between"
-                                align="center"
+                                align="flex-start"
                               >
                                 <Text
-                                  w="256px"
+                                  w="full" maxW="256px"
                                   h="32px"
                                   fontFamily="body"
                                   fontWeight="medium"
@@ -400,14 +407,16 @@ const Header = () => {
 
                               {/* Quantity and Price Section */}
                               <HStack
-                                w="376px"
-                                h="78.665px"
-                                gap="80px"
+                                w="full"
+                                h="auto"
+                                gap="4"
                                 align="center"
+                                justify="space-between"
+                                wrap="wrap"
                               >
                                 {/* Quantity Selector */}
                                 <Box
-                                  w="193px"
+                                  w={{ base: "full", sm: "193px" }}
                                   h="54px"
                                   rounded="8px"
                                   borderWidth="1px"
@@ -519,16 +528,17 @@ const Header = () => {
 
                     {/* Summary and Checkout Section */}
                     <Box
-                      w="593px"
+                      w="full"
                       pt="24px"
                       pr="6"
                       pb="24px"
                       pl="6"
                       borderTopWidth="1px"
                       borderColor="var(--gray-200, #E4E4E7)"
+                      bg="white"
                     >
                       <Stack
-                        w="545px"
+                        w="full"
                         gap="24px"
                       >
                         {/* Summary Section */}
@@ -576,13 +586,13 @@ const Header = () => {
 
                             {/* Shipping */}
                             <HStack
-                              w="545px"
+                              w="full"
                               h="20px"
                               justify="space-between"
                               align="center"
                             >
                               <Text
-                                w="74px"
+                                w="auto"
                                 h="20px"
                                 fontFamily="body"
                                 fontWeight="normal"
@@ -594,7 +604,7 @@ const Header = () => {
                                 Shipping
                               </Text>
                               <Text
-                                w="74px"
+                                w="auto"
                                 h="20px"
                                 fontFamily="body"
                                 fontWeight="medium"

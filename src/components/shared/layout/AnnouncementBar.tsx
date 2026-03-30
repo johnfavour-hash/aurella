@@ -12,7 +12,7 @@ const AnnouncementBar = () => {
           textAlign="center"
           letterSpacing="0"
           color="white"
-          w="484.8488464355469px"
+          w="full" maxW="485px"
           h="16.8px"
         >
           Free shipping on orders over $100 | Use code AURELIA20 for 20% off

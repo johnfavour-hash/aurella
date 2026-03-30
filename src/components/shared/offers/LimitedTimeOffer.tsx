@@ -4,7 +4,7 @@ import { LuArrowRight } from "react-icons/lu"
 const LimitedTimeOffer = () => {
   return (
     <Box 
-      w="1440px" 
+      w="full" maxW="1440px" mx="auto" 
       h="640px" 
       mx="auto" 
       position="relative" 

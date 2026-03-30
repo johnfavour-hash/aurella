@@ -16,7 +16,7 @@ const ProductDetailsPage = () => {
       {/* Top Banner (Header usually handles this, just hardcoding for visual match if needed, but it seems there's a global header above Breadcrumbs. We just start with breadcrumbs) */}
       
       {/* Breadcrumbs */}
-      <Box w="full" px="100px" pt="32px" pb="32px" bg="#FFFFFF">
+      <Box w="full" px={{ base: 4, md: 8, xl: "100px" }} pt="32px" pb="32px" bg="#FFFFFF">
         <HStack h="20.665px" gap="8px" align="center">
           {["Home", "Shop", "Women", "Cashmere Blend Coat"].map((crumb, idx) => (
             <HStack key={crumb} gap="8px">
@@ -36,7 +36,7 @@ const ProductDetailsPage = () => {
       </Box>
 
       {/* Main Product Section */}
-      <Flex w="full" px="100px" gap="48px" align="flex-start" pb="80px">
+      <Flex w="full" px={{ base: 4, md: 8, xl: "100px" }} gap="48px" align="flex-start" pb="80px">
         
         {/* Left Side: Images */}
         <Stack gap="20px" w="584px" flexShrink={0}>
@@ -212,17 +212,17 @@ const ProductDetailsPage = () => {
       </Flex>
 
       {/* Product Details Tabs (Description, Size Guide, Reviews) */}
-      <Box w="full" px="100px" pb="80px">
-        <HStack gap="32px" borderBottom="1px solid #E4E4E7" w="full" mb="32px">
+      <Box w="full" px={{ base: 4, md: 8, xl: "100px" }} pb="80px">
+        <HStack gap="32px" w="full" mb="32px">
           {["Description", "Size Guide", "Reviews (0)"].map((tab) => (
             <Box 
               key={tab} 
-              py="12px" 
-              borderBottom="2px solid" 
-              borderColor={activeTab === tab ? "#18181B" : "transparent"}
+              py="8px"
+              px="16px"
+              bg={activeTab === tab ? "#F4F4F5" : "transparent"}
+              rounded="md"
               cursor="pointer"
               onClick={() => setActiveTab(tab)}
-              mb="-1px"
             >
               <Text fontFamily="body" fontWeight={activeTab === tab ? "500" : "normal"} fontSize="md" color={activeTab === tab ? "#18181B" : "#71717A"}>
                 {tab}
@@ -249,7 +249,7 @@ const ProductDetailsPage = () => {
       </Box>
 
       {/* You May Also Like Section */}
-      <Box w="full" px="100px" pb="120px">
+      <Box w="full" px={{ base: 4, md: 8, xl: "100px" }} pb="120px">
         <Text fontFamily="body" fontWeight="600" fontSize="xl" color="#18181B" mb="32px">
           You May Also Like
         </Text>
@@ -257,19 +257,19 @@ const ProductDetailsPage = () => {
           {[1, 2].map((i) => (
             <Box
               key={i}
-              w="292px"
+              w="full" maxW="292px"
               h="419px"
               bg="#FFFFFF"
               rounded="l3"
               borderWidth="1px"
               borderColor="#E4E4E7"
             >
-              <Box w="292px" h="175px" position="relative">
+              <Box w="full" maxW="292px" h="175px" position="relative">
                 <Link to={`/product/${i}`}>
                   <Image
                     src={i === 1 ? "/images/cd372093a3f1d750d38579c542ef2223c741f156.jpg" : "/images/bfd7e30703bbd5af758c3d7993692fd5b40f1159.jpg"}
                     alt="Related item"
-                    w="292px"
+                    w="full" maxW="292px"
                     h="175px"
                     objectFit="cover"
                     borderTopLeftRadius="12px"
@@ -277,7 +277,7 @@ const ProductDetailsPage = () => {
                   />
                 </Link>
               </Box>
-              <Box w="292px" h="244px" p="24px">
+              <Box w="full" maxW="292px" h="244px" p="24px">
                 <Stack w="244px" h="196px" gap="20px">
                   <Stack w="244px" h="136px" gap="8px">
                     <Text fontFamily="body" fontWeight="500" fontSize="lg" lineHeight="28px" letterSpacing="0" color="#000000" w="187px" h="28px">
